@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Quay lại Mục Lục</a>
+        <h1>Danh Sách Sản Phẩm</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="🔎 Tìm kiếm sản phẩm theo tên...">
+        </div>
+        
+        <div id="productList" class="product-grid">
+            </div>
+
+        <p id="notFoundMessage" class="error-message"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Khởi chạy hàm tìm kiếm của bài 1
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initProductSearch === 'function') {
+                initProductSearch();
+            }
+        });
+    </script>
+</body>
+</html>

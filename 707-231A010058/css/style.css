@@ -1,0 +1,309 @@
+/* --- THIẾT LẬP CHUNG VÀ FONT --- */
+body {
+    font-family: 'Roboto', sans-serif; /* Sử dụng font hiện đại */
+    background-color: #f7f9fc; /* Màu nền nhẹ nhàng, hiện đại */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Cuộn mượt khi nhấn nút */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- TRANG CHỦ: HERO SECTION --- */
+.hero-section {
+    background: linear-gradient(135deg, #007bff, #0056b3); 
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid #ffc107; /* Viền vàng nổi bật */
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.05) rotate(3deg); /* Hiệu ứng sinh động */
+}
+
+.hero-section h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.3em;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* --- BUTTONS CHUNG --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px; /* Bo tròn làm nút hiện đại */
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    color: #333;
+    border-color: #ffc107;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px); /* Hiệu ứng nhấc lên */
+}
+
+.btn-project {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+    font-size: 0.9em;
+}
+
+.btn-project:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* --- PROJECT GRID (INDEX.HTML) --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: #007bff;
+    margin: 40px 0 30px 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.section-title::after { /* Đường gạch chân sinh động */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffc107;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.project-grid-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card-main {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.project-card-main:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9ff;
+}
+
+.icon-header {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.project-card-main h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.project-card-main h3 a:hover {
+    color: #007bff;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #343a40;
+    color: #ccc;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* --- CSS CHUNG CHO CÁC TRANG BÀI TẬP --- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.back-link:hover {
+    border-bottom: 2px solid #007bff;
+}
+
+/* --- BÀI 1: PRODUCT SEARCH --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    border-color: #007bff;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* --- BÀI 2: FORM VALIDATION --- */
+.registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.registration-form button[type="submit"] {
+    background-color: #28a745;
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.success-message {
+    border-color: #28a745;
+    background-color: #e6ffed;
+    color: #155724;
+}
+
+/* Thêm class chung cho các nút Timer */
+.timer-controls {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin-top: 20px;
+}
+
+.btn-timer {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#startButton {
+    background-color: #ffc107; /* Màu vàng */
+    color: #333;
+}
+
+#startButton:hover {
+    background-color: #e0a800;
+}
+
+#pauseButton {
+    background-color: #17a2b8; /* Màu xanh nước biển cho Dừng */
+    color: white;
+}
+
+#pauseButton:hover {
+    background-color: #138496;
+}
+
+/* Hiệu ứng khi đang ở trạng thái Tiếp tục */
+#pauseButton.paused {
+    background-color: #28a745; /* Màu xanh lá cây */
+}
+
+#pauseButton:disabled, #startButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Cập nhật style cho timer display */
+.timer-display {
+    font-size: 7em;
+    font-weight: 700;
+    color: #333;
+    padding: 20px 40px;
+    margin: 30px 0;
+    border: 5px solid #007bff;
+    border-radius: 15px;
+    background-color: #e9f5ff;
+    min-width: 300px; /* Đảm bảo kích thước lớn */
+    transition: all 0.5s;
+}

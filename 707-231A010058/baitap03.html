@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Đồng Hồ Đếm Ngược</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container center-content">
+        <a href="index.html" class="back-link">← Quay lại Trang Chủ</a> 
+        <h1>Đồng Hồ Đếm Ngược</h1>
+        
+        <div id="timerDisplay" class="timer-display">10:00</div> 
+
+        <div class="timer-controls">
+            <button id="startButton" class="btn-timer">Bắt Đầu Lại</button> 
+            <button id="pauseButton" class="btn-timer">Dừng</button> 
+        </div>
+
+        <div id="modalAlert" class="modal-alert">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>⏰ Hết Giờ!</h2>
+                <p>Thời gian đếm ngược đã kết thúc.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Khởi chạy hàm timer khi DOM đã tải xong
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initCountdownTimer === 'function') {
+                initCountdownTimer();
+            }
+        });
+    </script>
+</body>
+</html> 
